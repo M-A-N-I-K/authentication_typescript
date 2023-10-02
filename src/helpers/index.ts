@@ -1,6 +1,7 @@
 import crypto from "crypto"
+require('dotenv').config();
 
-const SECRET = "AUTH_REST_API";
+const SECRET = process.env.SECRET_USED;
 
 export const random = () => crypto.randomBytes(128).toString('base64');
 
