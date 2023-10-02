@@ -26,7 +26,7 @@ export const login = async (req : express.Request,res : express.Response) =>{
 
         res.cookie("AUTH",user.authentication.sessionToken,{domain : 'localhost ',path : "/"});
 
-        res.sendStatus(200).json(user).end();
+        res.status(200).json(user).end();
     }
     catch(error){
         console.log(error);
